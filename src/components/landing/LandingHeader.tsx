@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { nav } from "@/config/site";
 import { Logo } from "./Logo";
+import { OfferLink } from "./OfferLink";
 
 export function LandingHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,12 +53,12 @@ export function LandingHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href="#oferta"
+          <OfferLink
+            source="menu"
             className="hidden rounded-full bg-red px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110 sm:inline-flex"
           >
             Quero o guia
-          </a>
+          </OfferLink>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -85,13 +86,13 @@ export function LandingHeader() {
               {n.label}
             </a>
           ))}
-          <a
-            href="#oferta"
+          <OfferLink
+            source="menu"
             onClick={() => setOpen(false)}
             className="mt-3 mb-2 rounded-full bg-red py-3 text-center text-sm font-semibold text-white"
           >
             Quero o guia
-          </a>
+          </OfferLink>
         </nav>
       </div>
     </header>

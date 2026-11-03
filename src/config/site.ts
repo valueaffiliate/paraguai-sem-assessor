@@ -56,6 +56,23 @@ export const offer = {
     "Guia digital educacional. Taxas governamentais e despesas pessoais não estão incluídas.",
 };
 
+/**
+ * Rastreamento de anúncios do X (Twitter).
+ * 1. No X Ads > Ferramentas > Gerenciador de eventos, crie o pixel e copie o ID (ex.: "abc12").
+ * 2. Crie os eventos e cole os IDs (formato "tw-abc12-xyz34").
+ * Também pode ser definido por variável de ambiente na Vercel.
+ * Enquanto o ID for null, nenhum script do X é carregado.
+ */
+export const tracking = {
+  xPixelId: (process.env.NEXT_PUBLIC_X_PIXEL_ID ?? null) as string | null,
+  xEvents: {
+    /** Clique no botão de compra (início do checkout). */
+    checkoutClick: (process.env.NEXT_PUBLIC_X_EVENT_CHECKOUT ?? null) as string | null,
+    /** Clique em qualquer botão "Quero o guia" que leva à oferta. */
+    offerClick: (process.env.NEXT_PUBLIC_X_EVENT_OFFER ?? null) as string | null,
+  },
+};
+
 export const company = {
   /** Dados reais da empresa responsável. null = não exibido. */
   legalName: null as string | null,

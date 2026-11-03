@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Info } from "lucide-react";
 import { offer } from "@/config/site";
+import { trackX } from "@/lib/track";
 
 /** Leva ao checkout configurado. Sem checkout, mostra um aviso claro em vez de simular pagamento. */
 export function CheckoutButton({ label, className = "" }: { label: string; className?: string }) {
@@ -10,7 +11,7 @@ export function CheckoutButton({ label, className = "" }: { label: string; class
 
   if (offer.checkoutUrl) {
     return (
-      <a href={offer.checkoutUrl} className={className} rel="noopener">
+      <a href={offer.checkoutUrl} className={className} rel="noopener" onClick={() => trackX("checkoutClick")}>
         {label} <ArrowRight size={18} aria-hidden />
       </a>
     );

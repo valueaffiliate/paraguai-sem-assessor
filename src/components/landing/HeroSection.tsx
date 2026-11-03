@@ -1,6 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import { photos } from "@/config/site";
 import { Photo } from "./Photo";
+import { OfferLink } from "./OfferLink";
 
 const facts = ["Guia 100% digital", "Passo a passo em português", "Checklists e fontes oficiais"];
 
@@ -25,13 +26,13 @@ export function HeroSection() {
             oficiais para solicitar sua documentação no Paraguai por conta própria.
           </p>
           <div className="rise rise-4 mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#oferta"
+            <OfferLink
+              source="hero"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-red px-7 py-4 text-[15px] font-semibold text-white shadow-[0_10px_30px_-10px_rgba(215,74,69,.7)] transition hover:brightness-110"
             >
               Quero o guia passo a passo
               <ArrowRight size={18} className="transition group-hover:translate-x-0.5" />
-            </a>
+            </OfferLink>
             <a
               href="#plataforma"
               className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-4 text-[15px] font-semibold text-white transition hover:bg-white/10"

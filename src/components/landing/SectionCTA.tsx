@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { formatBRL, offer } from "@/config/site";
+import { OfferLink } from "./OfferLink";
 
 /** Chamada de compra repetida ao fim das seções. */
 export function SectionCTA({
@@ -24,13 +25,13 @@ export function SectionCTA({
         </span>
         {offer.paymentType.toLowerCase()} · acesso 100% digital
       </p>
-      <a
-        href="#oferta"
+      <OfferLink
+        source="secao"
         className="group inline-flex items-center justify-center gap-2 rounded-full bg-red px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_10px_30px_-12px_rgba(215,74,69,.8)] transition hover:brightness-110"
       >
         {label}
         <ArrowRight size={17} className="transition group-hover:translate-x-0.5" aria-hidden />
-      </a>
+      </OfferLink>
     </div>
   );
 }

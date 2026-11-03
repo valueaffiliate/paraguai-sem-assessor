@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { formatBRL, offer } from "@/config/site";
+import { OfferLink } from "./OfferLink";
 
 export function MobileStickyCTA() {
   const [visible, setVisible] = useState(false);
@@ -45,13 +46,13 @@ export function MobileStickyCTA() {
           Acesso por
           <span className="tabular block text-lg font-extrabold text-navy">{formatBRL(offer.launchPrice)}</span>
         </p>
-        <a
-          href="#oferta"
+        <OfferLink
+          source="barra-celular"
           tabIndex={visible ? 0 : -1}
           className="rounded-full bg-red px-6 py-3 text-sm font-semibold text-white"
         >
           Começar agora
-        </a>
+        </OfferLink>
       </div>
     </div>
   );

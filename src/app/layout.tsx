@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { brand, offer, faq } from "@/config/site";
+import { XPixel } from "@/components/XPixel";
 
 const title = "Paraguai Sem Assessor | Residência no Paraguai para brasileiros, passo a passo";
 const description =
@@ -80,7 +81,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <XPixel />
+      </body>
     </html>
   );
 }
