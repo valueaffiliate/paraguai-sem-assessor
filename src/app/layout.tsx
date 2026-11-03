@@ -4,7 +4,7 @@ import { brand, offer, faq } from "@/config/site";
 
 const title = "Paraguai Sem Assessor | Residência no Paraguai para brasileiros, passo a passo";
 const description =
-  "Treinamento digital em português para entender a residência no Paraguai, preparar documentos (certidões, apostilamento, antecedentes) e solicitar sua documentação por conta própria. Sem promessa de aprovação.";
+  "Guia digital em português para entender a residência no Paraguai, preparar documentos (certidões, apostilamento, antecedentes) e solicitar sua documentação por conta própria. Sem promessa de aprovação.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(brand.siteUrl),

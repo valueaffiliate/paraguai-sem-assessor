@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import { modules, type ModuleStatus } from "@/config/site";
+import { SectionCTA } from "./SectionCTA";
 
 const statusLabel: Record<ModuleStatus, string | null> = {
   disponivel: "Disponível",
@@ -11,7 +12,7 @@ const statusLabel: Record<ModuleStatus, string | null> = {
 };
 
 export function ModulesSection() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   useEffect(() => {
     const sync = () => {
@@ -31,9 +32,9 @@ export function ModulesSection() {
       <div className="container-x">
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div>
-            <p className="eyebrow text-red">Conteúdo do treinamento</p>
+            <p className="eyebrow text-red">Conteúdo do guia</p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy md:text-[2.75rem]">
-              Tudo organizado em 15 módulos.
+              O guia completo em 15 módulos.
             </h2>
           </div>
           <p className="text-ink-soft lg:justify-self-end lg:max-w-md">
@@ -92,6 +93,7 @@ export function ModulesSection() {
             </ul>
           ))}
         </div>
+        <SectionCTA label="Quero os 15 módulos" />
       </div>
     </section>
   );

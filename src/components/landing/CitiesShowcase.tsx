@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { cities } from "@/config/site";
 import { Photo } from "./Photo";
+import { SectionCTA } from "./SectionCTA";
 
 export function CitiesShowcase() {
   return (
@@ -50,17 +51,13 @@ export function CitiesShowcase() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-sm text-ink-soft">
-            Apresentação geral das cidades. Custo de vida e moradia variam e são tratados no guia de cidades do treinamento.
-          </p>
-          <Link
-            href="/cidades"
-            className="inline-flex items-center gap-2 rounded-full border border-navy px-6 py-3 text-sm font-semibold text-navy transition hover:bg-navy hover:text-white"
-          >
-            Explorar as cidades do Paraguai <ArrowRight size={16} />
+        <p className="mt-6 text-sm text-ink-soft">
+          O guia inclui um módulo sobre onde morar.{" "}
+          <Link href="/cidades" className="inline-flex items-center gap-1 font-semibold text-navy underline-offset-4 hover:underline">
+            Explorar as cidades do Paraguai <ArrowRight size={14} />
           </Link>
-        </div>
+        </p>
+        <SectionCTA />
       </div>
     </section>
   );

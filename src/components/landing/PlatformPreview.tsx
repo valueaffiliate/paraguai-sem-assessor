@@ -13,6 +13,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { cities, formatBRL, modules } from "@/config/site";
+import { SectionCTA } from "./SectionCTA";
 
 type Tab = "dashboard" | "aulas" | "checklists" | "cidades";
 
@@ -41,10 +42,10 @@ export function PlatformPreview() {
       <div className="container-x relative">
         <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="eyebrow text-[#f08a85]">A plataforma</p>
-            <h2 className="mt-4 text-4xl font-extrabold leading-tight md:text-[3.25rem]">Muito mais que um e-book.</h2>
+            <p className="eyebrow text-[#f08a85]">O guia</p>
+            <h2 className="mt-4 text-4xl font-extrabold leading-tight md:text-[3.25rem]">Um guia completo, dentro de uma plataforma.</h2>
             <p className="mt-5 text-lg leading-relaxed text-white/70">
-              Uma plataforma digital para estudar, organizar e acompanhar cada etapa do seu planejamento.
+              Estude, marque seu checklist de documentos e planeje os custos em um só lugar.
             </p>
           </div>
 
@@ -125,9 +126,10 @@ export function PlatformPreview() {
           </div>
         </div>
 
-        <p className="mt-16 text-center text-xs text-white/50 lg:mt-20">
+        <p className="mt-16 text-xs text-white/50 lg:mt-20">
           Demonstração ilustrativa da interface do aluno. Progresso e valores exibidos são exemplos.
         </p>
+        <SectionCTA tone="dark" label="Quero acessar o guia" />
       </div>
     </section>
   );

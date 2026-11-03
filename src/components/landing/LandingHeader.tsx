@@ -56,7 +56,7 @@ export function LandingHeader() {
             href="#oferta"
             className="hidden rounded-full bg-red px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-110 sm:inline-flex"
           >
-            Quero começar
+            Quero o guia
           </a>
           <button
             type="button"
@@ -90,7 +90,7 @@ export function LandingHeader() {
             onClick={() => setOpen(false)}
             className="mt-3 mb-2 rounded-full bg-red py-3 text-center text-sm font-semibold text-white"
           >
-            Quero começar
+            Quero o guia
           </a>
         </nav>
       </div>

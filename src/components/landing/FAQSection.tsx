@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
 import { faq } from "@/config/site";
+import { SectionCTA } from "./SectionCTA";
 
 export function FAQSection() {
   const [open, setOpen] = useState<number | null>(0);
@@ -15,7 +16,7 @@ export function FAQSection() {
             Antes de decidir, tire suas dúvidas.
           </h2>
           <p className="mt-5 text-ink-soft">
-            Respostas diretas sobre o que o treinamento é, o que ele não faz e o que depende das autoridades paraguaias.
+            Respostas diretas sobre o que o guia é, o que ele não faz e o que depende das autoridades paraguaias.
           </p>
         </div>
         <ul className="border-t border-line">
@@ -50,6 +51,7 @@ export function FAQSection() {
             );
           })}
         </ul>
+        <SectionCTA className="lg:col-span-2" label="Tirei minhas dúvidas, quero o guia" />
       </div>
     </section>
   );

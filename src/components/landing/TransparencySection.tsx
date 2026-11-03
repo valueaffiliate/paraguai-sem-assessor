@@ -3,25 +3,24 @@ import { sources } from "@/config/site";
 
 export function TransparencySection() {
   return (
-    <section id="fontes" className="border-t border-line bg-paper py-16 md:py-20">
+    <section id="fontes" className="border-t border-line bg-paper py-14">
       <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className="eyebrow flex items-center gap-2 text-ink-soft">
             <ShieldCheck size={14} aria-hidden /> Transparência
           </p>
-          <h2 className="mt-4 text-2xl font-extrabold text-navy md:text-3xl">
+          <h2 className="mt-4 text-xl font-extrabold text-navy md:text-2xl">
             Informação independente e procedimentos oficiais.
           </h2>
-          <div className="mt-5 space-y-4 leading-relaxed text-ink-soft">
+          <div className="mt-4 space-y-3 text-sm leading-relaxed text-ink-soft">
             <p>
               O Paraguai Sem Assessor é um produto educacional independente. Não possui vínculo institucional com o
               Governo do Paraguai, com a Dirección Nacional de Migraciones ou com a Polícia Nacional paraguaia.
             </p>
             <p>
-              O treinamento orienta o planejamento e a compreensão dos procedimentos, mas não substitui análise
-              individual quando necessária e não garante emissão de documentos.
+              O guia orienta o planejamento, não substitui análise individual quando necessária e não garante emissão
+              de documentos. Requisitos e valores oficiais podem mudar.
             </p>
-            <p>Requisitos e valores oficiais podem ser alterados pelas autoridades.</p>
           </div>
         </div>
         <div className="min-w-0">

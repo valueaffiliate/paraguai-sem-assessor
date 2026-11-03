@@ -21,9 +21,9 @@ export interface Photo {
 export const brand = {
   name: "Paraguai Sem Assessor",
   shortName: "PSA",
-  tagline: "Treinamento digital sobre residência no Paraguai para brasileiros",
+  tagline: "Guia digital de residência no Paraguai para brasileiros",
   description:
-    "Treinamento digital em português para entender as modalidades de residência no Paraguai, preparar seus documentos e organizar a solicitação nos órgãos oficiais por conta própria.",
+    "Guia digital em português para entender as modalidades de residência no Paraguai, preparar seus documentos e organizar a solicitação nos órgãos oficiais por conta própria.",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://paraguaisemassessor.com.br",
   locale: "pt_BR",
 };
@@ -45,7 +45,7 @@ export const offer = {
   accessPeriod: null as string | null,
   updatesPolicy: null as string | null,
   benefits: [
-    "Acesso ao treinamento digital",
+    "Acesso completo ao guia digital",
     "Módulos e tutoriais",
     "Checklists práticos",
     "Guia de cidades",
@@ -53,7 +53,7 @@ export const offer = {
     "Biblioteca de fontes oficiais",
   ],
   disclaimer:
-    "Produto digital educacional. Taxas governamentais e despesas pessoais não estão incluídas.",
+    "Guia digital educacional. Taxas governamentais e despesas pessoais não estão incluídas.",
 };
 
 export const company = {
@@ -67,9 +67,9 @@ export const company = {
 
 export const nav = [
   { label: "Como funciona", href: "#como-funciona" },
-  { label: "O que você aprende", href: "#o-que-voce-aprende" },
-  { label: "O treinamento", href: "#plataforma" },
-  { label: "Perguntas frequentes", href: "#perguntas" },
+  { label: "O guia", href: "#plataforma" },
+  { label: "Módulos", href: "#modulos" },
+  { label: "Dúvidas", href: "#perguntas" },
 ];
 
 const commons = (file: string, width = 2000) =>
@@ -165,45 +165,6 @@ export const steps = [
   },
 ];
 
-export const learnTopics = [
-  {
-    title: "Documentos brasileiros",
-    text: "Certidões, antecedentes criminais, apostilamento e organização documental.",
-    href: "#modulo-3",
-    tag: "Módulo 3",
-  },
-  {
-    title: "Residência no Paraguai",
-    text: "Diferenças entre as modalidades, requisitos, taxas e procedimentos.",
-    href: "#modulo-5",
-    tag: "Módulos 5, 6 e 9",
-  },
-  {
-    title: "Cédula paraguaia",
-    text: "Quando pode ser solicitada e quais etapas precisam ser cumpridas.",
-    href: "#modulo-8",
-    tag: "Módulo 8",
-  },
-  {
-    title: "Procedimentos presenciais",
-    text: "Como organizar a apresentação de documentos e acompanhar solicitações.",
-    href: "#modulo-7",
-    tag: "Módulo 7",
-  },
-  {
-    title: "Planejamento financeiro",
-    text: "Estimativas de despesas, taxas e custos complementares.",
-    href: "#plataforma",
-    tag: "Calculadora de custos",
-  },
-  {
-    title: "Vida no Paraguai",
-    text: "Guia das principais cidades, moradia e planejamento da mudança.",
-    href: "#cidades",
-    tag: "Guia de cidades",
-  },
-];
-
 export const modules: { title: string; description: string; status: ModuleStatus }[] = [
   { title: "Conhecendo o Paraguai", description: "Panorama do país, regiões, moeda, idioma e o que considerar antes de decidir pela mudança.", status: "nao-definido" },
   { title: "Entendendo a documentação", description: "A diferença entre residência temporária, residência permanente, cédula e cidadania, e a ordem em que cada uma aparece.", status: "nao-definido" },
@@ -219,20 +180,16 @@ export const modules: { title: string; description: string; status: ModuleStatus
   { title: "Planejamento financeiro", description: "Estimativa de taxas, deslocamentos, hospedagem e custos complementares do processo.", status: "nao-definido" },
   { title: "Trabalho, empresas e tributação", description: "Visão geral introdutória sobre trabalho e empresas. Não substitui consultoria tributária ou jurídica.", status: "nao-definido" },
   { title: "Vida prática no Paraguai", description: "Moradia, contas, bancos, saúde e rotina para quem está se mudando.", status: "nao-definido" },
-  { title: "Plano de ação de 30 dias", description: "Um roteiro para transformar o conteúdo do treinamento em tarefas com prazos.", status: "nao-definido" },
+  { title: "Plano de ação de 30 dias", description: "Um roteiro para transformar o conteúdo do guia em tarefas com prazos.", status: "nao-definido" },
 ];
 
 export const faq = [
-  { q: "O Paraguai Sem Assessor é uma consultoria?", a: "Não. É um treinamento educacional digital que ensina a organizar documentos e entender os procedimentos oficiais para realizar a solicitação por conta própria." },
+  { q: "O Paraguai Sem Assessor é uma consultoria?", a: "Não. É um guia educacional digital que ensina a organizar documentos e entender os procedimentos oficiais para realizar a solicitação por conta própria." },
   { q: "Vocês emitem a documentação?", a: "Não. Os documentos e autorizações são emitidos exclusivamente pelos órgãos competentes." },
-  { q: "Consigo fazer o procedimento sozinho?", a: "É possível que o próprio interessado organize e apresente sua solicitação conforme as regras aplicáveis. Procedimentos migratórios podem exigir atendimento pessoal, documentos adicionais e análise das autoridades." },
   { q: "Preciso ir pessoalmente ao Paraguai?", a: "A solicitação de residência envolve procedimentos presenciais conforme as regras da Dirección Nacional de Migraciones." },
-  { q: "O valor inclui taxas do governo?", a: "Não. O preço corresponde ao acesso ao treinamento. As taxas governamentais e demais despesas são pagas separadamente." },
-  { q: "Vou conseguir a cédula paraguaia?", a: "A possibilidade e o momento de solicitar a cédula dependem da modalidade migratória, dos requisitos aplicáveis e das decisões das autoridades." },
-  { q: "Quanto tempo demora para conseguir a residência?", a: "Os prazos variam conforme a modalidade, a documentação, a análise do órgão e outras circunstâncias. O treinamento não garante prazo de conclusão." },
-  { q: "O curso ensina a morar no Paraguai?", a: "Sim. Há conteúdos complementares sobre cidades e planejamento da mudança, além do foco principal na documentação." },
-  { q: "Preciso falar espanhol?", a: "O treinamento é em português. Algumas etapas oficiais ocorrem em espanhol e podem exigir compreensão de documentos e orientações locais." },
-  { q: "O treinamento garante aprovação?", a: "Não. A decisão compete exclusivamente às autoridades paraguaias." },
+  { q: "O valor inclui taxas do governo?", a: "Não. O preço corresponde ao acesso ao guia. As taxas governamentais e demais despesas são pagas separadamente." },
+  { q: "Preciso falar espanhol?", a: "O guia é em português. Algumas etapas oficiais ocorrem em espanhol e podem exigir compreensão de documentos e orientações locais." },
+  { q: "O guia garante aprovação?", a: "Não. A decisão compete exclusivamente às autoridades paraguaias." },
 ];
 
 export const sources = {

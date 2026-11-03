@@ -2,7 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { photos } from "@/config/site";
 import { Photo } from "./Photo";
 
-const facts = ["Treinamento 100% digital", "Passo a passo em português", "Checklists e fontes oficiais"];
+const facts = ["Guia 100% digital", "Passo a passo em português", "Checklists e fontes oficiais"];
 
 export function HeroSection() {
   return (
@@ -29,14 +29,14 @@ export function HeroSection() {
               href="#oferta"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-red px-7 py-4 text-[15px] font-semibold text-white shadow-[0_10px_30px_-10px_rgba(215,74,69,.7)] transition hover:brightness-110"
             >
-              Quero aprender o passo a passo
+              Quero o guia passo a passo
               <ArrowRight size={18} className="transition group-hover:translate-x-0.5" />
             </a>
             <a
               href="#plataforma"
               className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-4 text-[15px] font-semibold text-white transition hover:bg-white/10"
             >
-              Conhecer o treinamento
+              Ver o que tem no guia
             </a>
           </div>
         </div>

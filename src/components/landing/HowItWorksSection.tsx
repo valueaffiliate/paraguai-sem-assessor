@@ -1,5 +1,6 @@
 import { Info } from "lucide-react";
 import { steps } from "@/config/site";
+import { SectionCTA } from "./SectionCTA";
 
 export function HowItWorksSection() {
   return (
@@ -32,6 +33,7 @@ export function HowItWorksSection() {
           <Info size={16} className="mt-0.5 shrink-0 text-navy" aria-hidden />
           O percurso varia conforme o perfil do solicitante, o regime migratório e as regras vigentes.
         </p>
+        <SectionCTA label="Quero seguir esse passo a passo" />
       </div>
     </section>
   );

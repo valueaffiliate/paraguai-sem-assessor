@@ -15,7 +15,7 @@ export default function CidadesPage() {
     <SimplePage title="Cidades do Paraguai">
       <p>
         Uma apresentação inicial de quatro cidades procuradas por brasileiros. O guia completo, com moradia,
-        deslocamento e serviços, faz parte do módulo 11 do treinamento.
+        deslocamento e serviços, faz parte do módulo 11 do guia.
       </p>
       <div className="grid gap-6 pt-4">
         {cities.map((c) => (
@@ -30,7 +30,7 @@ export default function CidadesPage() {
         ))}
       </div>
       <p className="pt-4">
-        <Link href="/#oferta" className="font-semibold text-red hover:underline">Conhecer o treinamento completo</Link>
+        <Link href="/#oferta" className="font-semibold text-red hover:underline">Conhecer o guia completo</Link>
       </p>
     </SimplePage>
   );

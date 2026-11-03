@@ -1,7 +1,9 @@
+import { SectionCTA } from "./SectionCTA";
+
 const pains = [
-  { title: "Não saber quais documentos preparar no Brasil", text: "Certidões, antecedentes e apostilamento têm ordem e prazo. Um documento fora do padrão pode atrasar a viagem inteira." },
-  { title: "Confundir residência, cédula e cidadania", text: "São etapas diferentes, com requisitos próprios. Entender a diferença evita planejar a etapa errada." },
-  { title: "Viajar sem entender os procedimentos necessários", text: "Os atendimentos são presenciais. Chegar sem saber o que apresentar costuma significar dias extras e custos a mais." },
+  "Não saber quais documentos preparar no Brasil",
+  "Confundir residência, cédula e cidadania",
+  "Viajar sem entender os procedimentos necessários",
 ];
 
 export function ProblemSection() {
@@ -13,31 +15,21 @@ export function ProblemSection() {
           <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy md:text-[2.75rem]">
             Quer morar no Paraguai, mas não sabe por onde começar?
           </h2>
-          <div className="mt-7 space-y-5 text-[17px] leading-relaxed text-ink-soft">
-            <p>
-              Para quem pretende solicitar residência no Paraguai, uma das maiores dificuldades é entender quais
-              documentos preparar, qual modalidade consultar, como organizar as etapas e onde confirmar os requisitos.
-            </p>
-            <p>Muitas informações estão espalhadas por diferentes páginas governamentais, frequentemente em espanhol.</p>
-            <p>
-              O Paraguai Sem Assessor reúne esse conhecimento em português, com uma sequência didática e ferramentas
-              práticas.
-            </p>
-          </div>
+          <p className="mt-7 text-[17px] leading-relaxed text-ink-soft">
+            As regras estão espalhadas em páginas oficiais, quase sempre em espanhol. O Paraguai Sem Assessor
+            reúne tudo em um guia em português, na ordem certa para você executar.
+          </p>
         </div>
 
         <div className="min-w-0">
           <p className="eyebrow text-ink-soft">Três dificuldades comuns</p>
           <ol className="mt-4 divide-y divide-line border-y border-line">
             {pains.map((p, i) => (
-              <li key={p.title} className="grid grid-cols-[2.5rem_1fr] gap-4 py-6">
+              <li key={p} className="grid grid-cols-[2.5rem_1fr] items-baseline gap-4 py-5">
                 <span className="tabular font-[family-name:var(--font-display)] text-sm font-bold text-red">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div>
-                  <h3 className="text-lg font-bold text-navy">{p.title}</h3>
-                  <p className="mt-1.5 leading-relaxed text-ink-soft">{p.text}</p>
-                </div>
+                <h3 className="text-lg font-bold text-navy">{p}</h3>
               </li>
             ))}
           </ol>
@@ -45,6 +37,7 @@ export function ProblemSection() {
             Nosso objetivo é transformar informações dispersas em um roteiro organizado para você executar.
           </p>
         </div>
+        <SectionCTA className="lg:col-span-2 lg:mt-4" />
       </div>
     </section>
   );

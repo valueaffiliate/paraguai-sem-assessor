@@ -16,7 +16,7 @@ export function PricingSection() {
             Comece a planejar sua documentação com mais segurança.
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-            Acesse o treinamento Paraguai Sem Assessor e tenha um caminho organizado para estudar os procedimentos,
+            Acesse o guia Paraguai Sem Assessor e tenha um caminho organizado para estudar os procedimentos,
             preparar seus documentos e planejar sua solicitação.
           </p>
           <ul className="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -33,7 +33,7 @@ export function PricingSection() {
 
         <div className="min-w-0 rounded-3xl bg-paper p-7 text-navy shadow-[0_40px_80px_-30px_rgba(0,0,0,.6)] md:p-10">
           <div className="flex items-center justify-between gap-4">
-            <p className="eyebrow text-ink-soft">Acesso ao treinamento</p>
+            <p className="eyebrow text-ink-soft">Guia Paraguai Sem Assessor</p>
             <span className="rounded-full bg-red/10 px-3 py-1 text-xs font-semibold text-red">Preço de lançamento</span>
           </div>
           <p className="tabular mt-6 flex items-start font-[family-name:var(--font-display)] font-extrabold leading-none">
@@ -55,7 +55,7 @@ export function PricingSection() {
 
           <div className="mt-8 [&_#aviso-checkout]:border-line [&_#aviso-checkout]:bg-mist [&_#aviso-checkout]:text-ink-soft">
             <CheckoutButton
-              label="Quero acessar o treinamento"
+              label="Quero acessar o guia"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-red px-6 py-4 text-[15px] font-semibold text-white transition hover:brightness-110"
             />
           </div>
