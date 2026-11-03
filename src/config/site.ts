@@ -28,6 +28,12 @@ export const brand = {
   locale: "pt_BR",
 };
 
+/** Produto vendido. O id é gravado nos pedidos e nos acessos. */
+export const product = {
+  id: "guia-paraguai-sem-assessor",
+  name: "Guia Paraguai Sem Assessor",
+};
+
 export const offer = {
   currency: "BRL",
   launchPrice: 119.9,
@@ -38,7 +44,7 @@ export const offer = {
    * URL do checkout real. Enquanto for null, a página mostra um aviso claro
    * de que o checkout ainda não está ativo e não leva a nenhum pagamento.
    */
-  checkoutUrl: null as string | null,
+  checkoutUrl: "/checkout" as string | null,
   /** Preencha somente com política comercial real. null = não exibido. */
   installments: null as string | null,
   guarantee: null as string | null,
@@ -70,6 +76,8 @@ export const tracking = {
     checkoutClick: (process.env.NEXT_PUBLIC_X_EVENT_CHECKOUT ?? null) as string | null,
     /** Clique em qualquer botão "Quero o guia" que leva à oferta. */
     offerClick: (process.env.NEXT_PUBLIC_X_EVENT_OFFER ?? null) as string | null,
+    /** Pagamento confirmado (disparado na página do pedido quando o status vira "pago"). */
+    purchase: (process.env.NEXT_PUBLIC_X_EVENT_PURCHASE ?? null) as string | null,
   },
 };
 
